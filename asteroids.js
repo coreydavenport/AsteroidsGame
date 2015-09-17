@@ -6,7 +6,9 @@ window.addEventListener('load', function(){
 var Game = (function(){
 	function Game(){
 		//console.log("Game created");
+		Key.init();
 		this.updateAll();
+
 	}
 	Game.prototype.updateAll = function(){
 		(function drawFrame(){
@@ -45,7 +47,7 @@ var Rock = (function(){
 })();
 
 
-//Tracks keypress
+//Tracks keypress. Adds keys to array as they are pressed
 var Key = (function(){
 	function Key(){
 		//console.log("Key created");
