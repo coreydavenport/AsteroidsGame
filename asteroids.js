@@ -1,9 +1,18 @@
+// Once script is loaded, instantiate Game
+window.addEventListener('load', function(){
+	var game = new Game();
+})
+
 var Game = (function(){
 	function Game(){
 		//console.log("Game created");
+		this.updateAll();
 	}
 	Game.prototype.updateAll = function(){
-		
+		(function drawFrame(){
+			window.requestAnimationFrame(drawFrame);
+			//console.log(Key.keys);
+		})()
 	};
 	return Game;
 })();
