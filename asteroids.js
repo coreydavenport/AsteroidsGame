@@ -15,7 +15,12 @@ var Game = (function(){
 		this.rocks = [];
 		this.imgs = [];
 		Game.ctx = this.screen.getContext('2d'); //access canvas
+		this.loadAssets(['player.png','rock1.png','sf1.jpg']); //forcing assets to load in this specific order
 	}
+
+
+
+
 	Game.prototype.updateAll = function(){
 		(function drawFrame(){
 			window.requestAnimationFrame(drawFrame);
