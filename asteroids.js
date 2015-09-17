@@ -8,7 +8,13 @@ var Game = (function(){
 		//console.log("Game created");
 		Key.init();
 		this.updateAll();
-
+		this.screen = document.querySelector('#canvas');
+		this.scoreText = document.querySelector('#score');
+		this.score = 0;
+		this.player = null;
+		this.rocks = [];
+		this.imgs = [];
+		Game.ctx = this.screen.getContext('2d'); //access canvas
 	}
 	Game.prototype.updateAll = function(){
 		(function drawFrame(){
