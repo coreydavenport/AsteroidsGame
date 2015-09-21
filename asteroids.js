@@ -17,7 +17,7 @@ var Game = (function(){
 		Game.ctx = this.screen.getContext('2d'); //access canvas
 		this.loadAssets(['player.png','rock1.png','sf1.jpg']); //forcing assets to load in this specific order
 	}
-
+	// load assets prototype here
 
 
 
